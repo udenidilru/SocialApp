@@ -2,11 +2,11 @@ import React from 'react';
 import {
   StyleSheet,View,Text, ActivityIndicator} from 'react-native';
 
-export default class LoadingScreen extends React.Component {
+export default class HomeScreen extends React.Component {
     render(){
         return (
-            <View style={styles.container}>
-                <Text>Loading.....</Text>
+            <View style={StyleSheet.container}>
+                <Text>Home Screen</Text>
                 <ActivityIndicator size="large"></ActivityIndicator>
             </View>
         );
