@@ -76,7 +76,7 @@ export default class RegisterScreen extends React.Component {
                 style={{ alignSelf: "center", marginTop: 32}}
                 >
                     <Text style={{color: "#414959", fontSize: 13}}>
-                        New to SocialApp? <Text style={{ fontWeight: "500",color: "#E9446A"}}>Sign Up</Text>
+                        New to SocialApp? <Text style={{ fontWeight: "500",color: "#E9446A"}}>Login</Text>
                     </Text>
                 </TouchableOpacity>
             </View>
