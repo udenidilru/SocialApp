@@ -2,12 +2,16 @@ import React from 'react';
 import {
   StyleSheet,
   View,
-  Text
+  Text,Image,StatusBar
 } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
-import * as firebase from 'firebase'
+import * as firebase from 'firebase';
+// import {Ionicons} from '@expo/vector-icons'
 
 export default class RegisterScreen extends React.Component {
+    static navigationOption = {
+        header: null
+    } 
 
     state = {
         name: "",
@@ -33,6 +37,14 @@ export default class RegisterScreen extends React.Component {
     render(){
         return (
             <View style={styles.container}>
+            <StatusBar barStyle="light-content"></StatusBar>
+            <Image 
+                source = {require("../assets/a.jpg")}
+                style = {{position: "absolute", bottom: -325, right: -225}}
+            ></Image>
+            {/* <TouchableOpacity>
+                <Ionicons name="ios-arrow-round-back" size={32} color="#FFF"></Ionicons>    
+            </TouchableOpacity> */}
                 <Text style={styles.greeting}>{'Hello.\nSign up to get Started.'}</Text>
 
                 <View style={styles.errorMessage}>
@@ -72,9 +84,9 @@ export default class RegisterScreen extends React.Component {
                     <Text style={{color: "#FFF", fontWeight: "500"}}>Sign Up</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity 
-                style={{ alignSelf: "center", marginTop: 32}}
-                >
+                <TouchableOpacity
+                 style={{ alignSelf: "center", marginTop: 32}}
+                 onPress={() => this.props.navigation.navigate("Login")}>
                     <Text style={{color: "#414959", fontSize: 13}}>
                         New to SocialApp? <Text style={{ fontWeight: "500",color: "#E9446A"}}>Login</Text>
                     </Text>
@@ -105,8 +117,8 @@ const styles = StyleSheet.create({
         marginHorizontal: 30
     },
     inputTitle: {
-        color: "#8A8F9E",
-        fontSize: 10,
+        //color: "#8A8F9E",
+        fontSize: 15,
         textTransform: "uppercase"
     },
     input: {
@@ -114,7 +126,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: StyleSheet.hairlineWidth,
         height: 40,
         fontSize: 15,
-        color: "#161F3D"
+       // color: "#161F3D"
     },
     button: {
         marginHorizontal: 30,

@@ -2,12 +2,15 @@ import React from 'react';
 import {
   StyleSheet,
   View,
-  Text
+  Text,Image,LayoutAnimation,StatusBar
 } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
 import * as firebase from 'firebase'
 
 export default class LoginScreen extends React.Component {
+    static navigationOption = {
+        header: null
+    } 
 
     state = {
         email: "",
@@ -26,8 +29,14 @@ export default class LoginScreen extends React.Component {
     }
 
     render(){
+        LayoutAnimation.easeInEaseOut();
         return (
             <View style={styles.container}>
+            <StatusBar barStyle="light-content"></StatusBar>
+            <Image 
+                source = {require("../assets/a.jpg")}
+                style = {{position: "absolute", bottom: -325, right: -225}}
+            ></Image>
                 <Text style={styles.greeting}>{'Hello again.\nWelcome back.'}</Text>
 
                 <View style={styles.errorMessage}>
@@ -91,8 +100,8 @@ const styles = StyleSheet.create({
         marginHorizontal: 30
     },
     inputTitle: {
-        color: "#8A8F9E",
-        fontSize: 10,
+        // color: "#8A8F9E",
+        fontSize: 15,
         textTransform: "uppercase"
     },
     input: {
@@ -100,7 +109,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: StyleSheet.hairlineWidth,
         height: 40,
         fontSize: 15,
-        color: "#161F3D"
+        // color: "#161F3D"
     },
     button: {
         marginHorizontal: 30,
