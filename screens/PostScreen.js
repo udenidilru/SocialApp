@@ -11,10 +11,10 @@ export default class PostScreen extends React.Component {
             <SafeAreaView style={StyleSheet.container}>
                 <View style={StyleSheet.header}>
                     <TouchableOpacity>
-                        <Icon style={StyleSheet.arrow} type='font-awesome' name="arrow-left" size={24} color="#D8D9DB"/>
+                        <Icon style={{ alignSelf:"flex-start",marginLeft:10}} type='font-awesome' name="arrow-left" size={24} color="#D8D9DB"/>
                     </TouchableOpacity>
                     <TouchableOpacity>
-                        <Text style={{fontWeight: "500"}}>Post</Text>
+                        <Text style={{fontWeight: "500" , alignSelf:"flex-end",marginRight:10}}>Post</Text>
                     </TouchableOpacity>
                 </View>
 
@@ -55,12 +55,16 @@ const styles = StyleSheet.create({
         borderRadius: 24,
         marginRight: 16
     },
+    inputContainer: {
+        margin: 32,
+        flexDirection: "row"
+    },
     photo: {
         alignItems: "flex-end",
         marginHorizontal: 32
     },
     arrow: {
-      //  alignItems: "left",
+        alignSelf:"flex-start"
     }
 }
 )

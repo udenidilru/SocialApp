@@ -20,10 +20,6 @@ import MessageScreen from './screens/MessageScreen'
 import NotificationScreen from './screens/NotificationScreen'
 import PostScreen from './screens/PostScreen'
 import ProfileScreen from './screens/ProfileScreen'
-
-// import Ionicons from 'react-native-vector-icons/Ionicons';
-// import FontAwesome from 'react-native-vector-icons/FontAwesome';
-// import Entypo from 'react-native-vector-icons/Entypo';
 import { Icon } from 'react-native-elements'
 import * as firebase from 'firebase';
 
@@ -59,12 +55,6 @@ const AppTabNavigator = createBottomTabNavigator(
           tabBarIcon: ({ tintColor }) => <Icon type='font-awesome' name="comments" size={24} color={tintColor}/>
         }
       },
-      // Post: {
-      //   screen: PostScreen,
-      //   navigationOptions: {
-      //     tabBarIcon: ({ tintColor }) => <Icon type='font-awesome' name="comments" size={24} color={tintColor}/>
-      //   }
-      // },
       Post: {
         screen: PostScreen,
         navigationOptions: {
