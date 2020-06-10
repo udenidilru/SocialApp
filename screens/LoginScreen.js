@@ -5,7 +5,8 @@ import {
   Text,Image,LayoutAnimation,StatusBar
 } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
-import * as firebase from 'firebase'
+//import * as firebase from 'firebase'
+import firebase from '../Fire';
 
 export default class LoginScreen extends React.Component {
     static navigationOption = {

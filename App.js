@@ -25,19 +25,21 @@ import * as firebase from 'firebase';
 
 //var firebaseConfig = FirebaseKeys;
 
-var firebaseConfig = {
-  apiKey: "AIzaSyBLxFR1aQ3lqID7i-sN8y4qFn-keYRRMxk",
-  authDomain: "socialapp-27882.firebaseapp.com",
-  databaseURL: "https://socialapp-27882.firebaseio.com",
-  projectId: "socialapp-27882",
-  storageBucket: "socialapp-27882.appspot.com",
-  messagingSenderId: "623708467460",
-  appId: "1:623708467460:web:22447bd593640a9baf6051",
-  measurementId: "G-G73ET70XJ7"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
+// var firebaseConfig = {
+//   apiKey: "AIzaSyBLxFR1aQ3lqID7i-sN8y4qFn-keYRRMxk",
+//   authDomain: "socialapp-27882.firebaseapp.com",
+//   databaseURL: "https://socialapp-27882.firebaseio.com",
+//   projectId: "socialapp-27882",
+//   storageBucket: "socialapp-27882.appspot.com",
+//   messagingSenderId: "623708467460",
+//   appId: "1:623708467460:web:22447bd593640a9baf6051",
+//   measurementId: "G-G73ET70XJ7"
+// };
+// // Initialize Firebase
+// //firebase.initializeApp(firebaseConfig);
+// if (!firebase.apps.length) {
+//   firebase.initializeApp(firebaseConfig);
+// }
 const AppTabNavigator = createBottomTabNavigator(
   // {
   // default: createBottomTabNavigator(
